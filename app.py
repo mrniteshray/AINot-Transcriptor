@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import time
 from youtube_transcript_api import YouTubeTranscriptApi
 
 app = Flask(__name__)
@@ -16,6 +17,8 @@ def get_transcript():
         
         # Extract video ID
         video_id = video_url.split("v=")[1].split("&")[0]
+        
+        time.sleep(2)
 
         # Fetch transcript
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
