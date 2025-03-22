@@ -18,7 +18,7 @@ def get_transcript():
         # Extract video ID
         video_id = video_url.split("v=")[1].split("&")[0]
         
-        time.sleep(2)
+        time.sleep(8)
 
         # Fetch transcript
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
